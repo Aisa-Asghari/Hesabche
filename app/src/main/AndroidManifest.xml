@@ -3,6 +3,8 @@
     package="ir.shariaty.hesabche">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -12,18 +14,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBvYXx1PlveQ5E7pCDEswdityN1JYW71CE" />
+
+        <activity android:name=".DrawerActivity"></activity>
         <activity android:name=".OutgoActivity" />
-        <activity android:name=".InviteActivity" />>
-        <activity android:name=".AboutActivity" />
+        <activity android:name=".InviteActivity">
+
+        </activity>
+        <activity android:name=".AboutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ReportActivity" />
         <activity android:name=".IncomeActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".IntroActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".MainActivity" />
     </application>
