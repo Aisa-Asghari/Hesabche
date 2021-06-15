@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgg">
+    android:background="@drawable/bg_gradient">
 
     <ImageView
         android:id="@+id/dollar"
@@ -59,7 +59,7 @@
         android:layout_marginBottom="24dp"
         android:fontFamily="@font/baloo"
         android:text="HESABCHE"
-        android:textColor="@color/fineGray"
+        android:textColor="#555555"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -74,7 +74,7 @@
         android:layout_marginBottom="128dp"
         android:fontFamily="@font/baloo"
         android:text="Aisa Asghari"
-        android:textColor="@color/fineGray"
+        android:textColor="#555555"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/appName"
