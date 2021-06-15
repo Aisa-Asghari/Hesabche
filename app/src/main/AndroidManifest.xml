@@ -11,26 +11,21 @@
         android:roundIcon="@mipmap/ic_hesabche_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".OutgoActivity"></activity>
-        <activity android:name=".InviteActivity"></activity>>
-        <activity android:name=".AboutActivity"></activity>
-        <activity android:name=".ReportActivity">
+
+        <activity android:name=".OutgoActivity" />
+        <activity android:name=".InviteActivity" />>
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".ReportActivity" />
+        <activity android:name=".IncomeActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".IncomeActivity"
-            android:label="@string/title_activity_income"
-            android:theme="@style/NoActionBar" />
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".SignupActivity"></activity>
-        <activity android:name=".IntroActivity"></activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
