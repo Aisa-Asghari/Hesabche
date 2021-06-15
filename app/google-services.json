@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "943119773746",
+    "project_id": "hesabche-56ee9",
+    "storage_bucket": "hesabche-56ee9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943119773746:android:263f75b628092a62298c2b",
+        "android_client_info": {
+          "package_name": "ir.shariaty.hesabche"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943119773746-o0ln86uiprmt6lal3oftre22jnnook3m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_AhES6ALixY7a9TgXYpFW7slB7CDmYa8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "943119773746-o0ln86uiprmt6lal3oftre22jnnook3m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_0"
+    android:fontFamily="@font/poppins_semibold"
+    tools:context=".IncomeActivity"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="Enter Your Income"
+                android:textColor="@color/center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:background="@color/center" />
+
+            <EditText
+                android:id="@+id/amountBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/textbox"
+                android:drawableLeft="@drawable/amount"
+                android:drawablePadding="16dp"
+                android:drawableTint="@color/center"
+                android:ems="10"
+                android:hint="Amount"
+                android:inputType="number"
+                android:padding="16dp" />
+
+            <EditText
+                android:id="@+id/categoryBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/textbox"
+                android:drawableLeft="@drawable/categories"
+                android:drawablePadding="16dp"
+                android:drawableTint="@color/center"
+                android:ems="10"
+                android:hint="Category"
+                android:inputType="textEmailAddress"
+                android:padding="16dp" />
+
+            <EditText
+                android:id="@+id/titleBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/textbox"
+                android:drawableLeft="@drawable/title"
+                android:drawablePadding="16dp"
+                android:drawableTint="@color/center"
+                android:ems="10"
+                android:hint="Title"
+                android:inputType="text"
+                android:padding="16dp" />
+
+            <EditText
+                android:id="@+id/dateBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/textbox"
+                android:drawableLeft="@drawable/calendar"
+                android:drawablePadding="16dp"
+                android:drawableTint="@color/center"
+                android:ems="10"
+                android:hint="Date"
+                android:inputType="date"
+                android:padding="16dp" />
+
+            <EditText
+                android:id="@+id/descBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/textbox"
+                android:drawableLeft="@drawable/edit"
+                android:drawablePadding="16dp"
+                android:drawableTint="@color/center"
+                android:ems="10"
+                android:hint="Description"
+                android:inputType="textMultiLine"
+                android:padding="16dp" />
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/loginbtn"
+                android:padding="8dp"
+                android:text="Submit"
+                android:textColor="@color/fineGray" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
