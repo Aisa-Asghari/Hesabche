@@ -44,7 +44,7 @@ public class ReportActivity extends DrawerActivity {
                         incomes.clear();
                         for (DocumentSnapshot snapshot : value.getDocuments()) {
                             Income model = snapshot.toObject(Income.class);
-                            model.setIncomeId(snapshot.getId());
+                            //model.incomeId(snapshot.getId());
                             incomes.add(model);
                         }
                         adapter.notifyDataSetChanged();

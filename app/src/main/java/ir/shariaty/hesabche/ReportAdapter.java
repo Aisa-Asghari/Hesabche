@@ -42,13 +42,13 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
         holder.binding.titleLb.setText(income.getTitle());
         holder.binding.catLb.setText(income.getCat());
 
-        //Outgo outgo = outgoes.get(position);
+        Outgo outgo = outgoes.get(position);
 
-        //holder.binding.descLb.setText(outgo.getDesc());
-        //holder.binding.amountLb.setText(outgo.getAmount());
-        //holder.binding.dateLb.setText(outgo.getDate());
-        //holder.binding.titleLb.setText(outgo.getTitle());
-        //holder.binding.catLb.setText(outgo.getCat());
+        holder.binding.descLb.setText(outgo.getDesc());
+        holder.binding.amountLb.setText(outgo.getAmount());
+        holder.binding.dateLb.setText(outgo.getDate());
+        holder.binding.titleLb.setText(outgo.getTitle());
+        holder.binding.catLb.setText(outgo.getCat());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

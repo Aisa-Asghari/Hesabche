@@ -3,7 +3,7 @@ package ir.shariaty.hesabche;
 public class Outgo {
 
     private String amount;
-    private String outgoId;
+    //private String outgoId;
     private String cat;
     private String title;
     private String date;
@@ -12,8 +12,8 @@ public class Outgo {
     public Outgo() {
     }
 
-    public Outgo(String outgoId, String amount, String cat, String title, String date, String desc) {
-        this.outgoId = outgoId;
+    public Outgo( String amount, String cat, String title, String date, String desc) {
+        //this.outgoId = outgoId;
         this.amount = amount;
         this.cat = cat;
         this.title = title;
@@ -21,9 +21,9 @@ public class Outgo {
         this.desc = desc;
     }
 
-    public String getOutgoId() { return outgoId; }
+    //public String getOutgoId() { return outgoId; }
 
-    public void setOutgoId(String outgoId) { this.outgoId = outgoId; }
+    //public void setOutgoId(String outgoId) { this.outgoId = outgoId; }
 
     public String getAmount() {
         return amount;

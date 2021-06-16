@@ -6,6 +6,8 @@ import android.os.Bundle;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
 import ir.shariaty.hesabche.databinding.ActivityIncomeBinding;
@@ -28,6 +30,8 @@ public class IncomeActivity extends DrawerActivity {
         dialog = new ProgressDialog(this);
         dialog.setMessage("Inserting Your Income..");
 
+        RunAnimation();
+
         binding.submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,7 +45,7 @@ public class IncomeActivity extends DrawerActivity {
                 date = binding.dateBox.getText().toString();
                 desc = binding.descBox.getText().toString();
 
-                Income income = new Income(incomeId,amount, cat, title, date, desc);
+                Income income = new Income(amount, cat, title, date, desc);
 
                 dialog.show();
 
@@ -58,5 +62,11 @@ public class IncomeActivity extends DrawerActivity {
                         );
             }
         });
+    }
+    private void RunAnimation() {
+        Animation alpha = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        alpha.reset();
+        binding.cardView.clearAnimation();
+        binding.cardView.startAnimation(alpha);
     }
 }

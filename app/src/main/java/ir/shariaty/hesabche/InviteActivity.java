@@ -11,6 +11,8 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
 import ir.shariaty.hesabche.databinding.ActivityIntroBinding;
@@ -26,6 +28,8 @@ public class InviteActivity extends DrawerActivity {
 
         binding=ActivityInviteBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        RunAnimation();
 
         binding.btSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +68,13 @@ public class InviteActivity extends DrawerActivity {
             Toast.makeText(getApplicationContext(), "Access Denied!", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    private void RunAnimation() {
+        Animation alpha = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        alpha.reset();
+        binding.cardView.clearAnimation();
+        binding.cardView.startAnimation(alpha);
     }
 
 }

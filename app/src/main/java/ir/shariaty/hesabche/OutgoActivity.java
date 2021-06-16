@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -29,6 +31,8 @@ public class OutgoActivity extends DrawerActivity {
         dialog = new ProgressDialog(this);
         dialog.setMessage("Inserting Your Outgo..");
 
+        RunAnimation();
+
         binding.submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,7 +46,7 @@ public class OutgoActivity extends DrawerActivity {
                 date = binding.dateBox.getText().toString();
                 desc = binding.descBox.getText().toString();
 
-                Outgo outgo = new Outgo(outggoId, amount, cat, title, date, desc);
+                Outgo outgo = new Outgo( amount, cat, title, date, desc);
 
                 dialog.show();
 
@@ -59,5 +63,11 @@ public class OutgoActivity extends DrawerActivity {
                         );
             }
         });
+    }
+    private void RunAnimation() {
+        Animation alpha = AnimationUtils.loadAnimation(this, R.anim.alpha);
+        alpha.reset();
+        binding.cardView.clearAnimation();
+        binding.cardView.startAnimation(alpha);
     }
 }

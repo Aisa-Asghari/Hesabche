@@ -4,19 +4,16 @@ import java.util.Map;
 
 public class Income {
 
-    private String incomeId;
+    //private String incomeId;
     private String amount;
     private String cat;
     private String title;
     private String date;
     private String desc;
 
-    public Income(String id, Map<String, Object> data) {
-    }
 
-
-    public Income(String incomeId, String amount, String cat, String title, String date, String desc) {
-        this.incomeId = incomeId;
+    public Income( String amount, String cat, String title, String date, String desc) {
+        //this.incomeId = incomeId;
         this.amount = amount;
         this.cat = cat;
         this.title = title;
@@ -24,9 +21,9 @@ public class Income {
         this.desc = desc;
     }
 
-    public String getIncomeId() { return incomeId; }
+    //public String getIncomeId() { return incomeId; }
 
-    public void setIncomeId(String incomeId) { this.incomeId = incomeId; }
+    //public void setIncomeId(String incomeId) { this.incomeId = incomeId; }
 
     public String getAmount() {
         return amount;

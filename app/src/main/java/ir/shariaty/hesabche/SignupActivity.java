@@ -41,6 +41,11 @@ public class SignupActivity extends AppCompatActivity {
         dialog = new ProgressDialog(this);
         dialog.setMessage("Creating Your Account..");
 
+        if (auth.getCurrentUser() != null) {
+            Toast.makeText(SignupActivity.this, "Welcome Back!", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(SignupActivity.this, ReportActivity.class));
+        }
+
         binding.submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,9 +73,8 @@ public class SignupActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
                                         dialog.dismiss();
-                                        startActivity(new Intent(SignupActivity.this, LoginActivity.class));
                                         Toast.makeText(SignupActivity.this, "Account Created Successfully!", Toast.LENGTH_SHORT).show();
-                                        finish();
+                                        startActivity(new Intent(SignupActivity.this, ReportActivity.class));
                                     } else {
                                         Toast.makeText(SignupActivity.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                                     }
