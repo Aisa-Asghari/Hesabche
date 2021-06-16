@@ -1,6 +1,7 @@
 package ir.shariaty.hesabche;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,20 +13,22 @@ import java.util.ArrayList;
 
 import ir.shariaty.hesabche.databinding.ItemReportBinding;
 
-public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportViewHolder>{
+public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportViewHolder> {
 
     Context context;
     ArrayList<Income> incomes;
+    ArrayList<Outgo> outgoes;
 
     public ReportAdapter(Context context, ArrayList<Income> incomes) {
         this.context = context;
         this.incomes = incomes;
+        this.outgoes = outgoes;
     }
 
     @NonNull
     @Override
     public ReportViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_report, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_report, null);
         return new ReportViewHolder(view);
     }
 
@@ -33,16 +36,32 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
     public void onBindViewHolder(@NonNull ReportViewHolder holder, int position) {
         Income income = incomes.get(position);
 
-        holder.binding.amountLb.setText(holder.binding.amountLb.getText()+income.getAmount());
-        holder.binding.titleLb.setText(holder.binding.titleLb.getText()+income.getTitle());
-        holder.binding.dateLb.setText(holder.binding.dateLb.getText()+income.getDate());
-        holder.binding.descLb.setText(holder.binding.descLb.getText()+income.getDesc());
+        holder.binding.descLb.setText(income.getDesc());
+        holder.binding.amountLb.setText(income.getAmount());
+        holder.binding.dateLb.setText(income.getDate());
+        holder.binding.titleLb.setText(income.getTitle());
+        holder.binding.catLb.setText(income.getCat());
+
+        //Outgo outgo = outgoes.get(position);
+
+        //holder.binding.descLb.setText(outgo.getDesc());
+        //holder.binding.amountLb.setText(outgo.getAmount());
+        //holder.binding.dateLb.setText(outgo.getDate());
+        //holder.binding.titleLb.setText(outgo.getTitle());
+        //holder.binding.catLb.setText(outgo.getCat());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
     }
 
     @Override
     public int getItemCount() {
-        return incomes.size();
+        return incomes.size() + outgoes.size();
     }
 
     public class ReportViewHolder extends RecyclerView.ViewHolder {

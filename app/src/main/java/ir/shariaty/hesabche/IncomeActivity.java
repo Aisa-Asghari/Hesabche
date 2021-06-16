@@ -5,16 +5,12 @@ import android.os.Bundle;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.view.View;
 import android.widget.Toast;
 
-import java.util.Calendar;
-
 import ir.shariaty.hesabche.databinding.ActivityIncomeBinding;
 
-public class IncomeActivity extends AppCompatActivity {
+public class IncomeActivity extends DrawerActivity {
 
     ActivityIncomeBinding binding;
     FirebaseFirestore database;
@@ -36,15 +32,16 @@ public class IncomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String amount, cat, title, date, desc;
+                String incomeId,amount, cat, title, date, desc;
 
+                incomeId="";
                 amount = binding.amountBox.getText().toString();
                 cat = binding.categoryBox.getText().toString();
                 title = binding.titleBox.getText().toString();
                 date = binding.dateBox.getText().toString();
                 desc = binding.descBox.getText().toString();
 
-                Income income = new Income(amount, cat, title, date, desc);
+                Income income = new Income(incomeId,amount, cat, title, date, desc);
 
                 dialog.show();
 

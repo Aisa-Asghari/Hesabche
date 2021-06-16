@@ -14,12 +14,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
+public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.ViewHolder> {
 
     Activity activity;
     ArrayList<String> arrayList;
 
-    public MainAdapter(Activity activity, ArrayList<String> arrayList) {
+    public DrawerAdapter(Activity activity, ArrayList<String> arrayList) {
         this.activity = activity;
         this.arrayList = arrayList;
     }
@@ -32,7 +32,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MainAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull DrawerAdapter.ViewHolder holder, int position) {
         holder.textView.setText(arrayList.get(position));
 
         holder.textView.setOnClickListener(new View.OnClickListener() {

@@ -9,6 +9,19 @@
     android:theme="@style/Theme.AppCompat.Light.NoActionBar"
     tools:context=".IncomeActivity">
 
+    <TextView
+        android:id="@+id/appName3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/baloo"
+        android:text="HESABCHE"
+        android:textColor="@color/fineGray"
+        android:textSize="48sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
@@ -19,7 +32,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/appName3">
 
         <LinearLayout
             android:layout_width="match_parent"

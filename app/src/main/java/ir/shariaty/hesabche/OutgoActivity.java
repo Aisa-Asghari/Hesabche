@@ -11,7 +11,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import ir.shariaty.hesabche.databinding.ActivityOutgoBinding;
 
-public class OutgoActivity extends AppCompatActivity {
+public class OutgoActivity extends DrawerActivity {
 
     ActivityOutgoBinding binding;
     FirebaseFirestore database;
@@ -33,15 +33,16 @@ public class OutgoActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String amount, cat, title, date, desc;
+                String outggoId, amount, cat, title, date, desc;
 
+                outggoId = "";
                 amount = binding.amountBox.getText().toString();
                 cat = binding.categoryBox.getText().toString();
                 title = binding.titleBox.getText().toString();
                 date = binding.dateBox.getText().toString();
                 desc = binding.descBox.getText().toString();
 
-                Outgo outgo = new Outgo(amount, cat, title, date, desc);
+                Outgo outgo = new Outgo(outggoId, amount, cat, title, date, desc);
 
                 dialog.show();
 

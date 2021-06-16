@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradient_0"
     android:fontFamily="@font/poppins_semibold"
-    tools:context=".ReportFragment">
+    tools:context=".ReportActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
